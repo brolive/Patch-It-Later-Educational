@@ -177,7 +177,10 @@ public class PlayerLogic : MonoBehaviour {
                 didJump = true;
                 anim.SetBool("jump", true);
                 moveDirection.y = jumpForce * 1.25f;
-                hit.transform.GetComponent<Animator>().SetTrigger("bounce");
+                //hit.transform.GetComponent<Animator>().SetTrigger("bounce");
+                hit.transform.GetComponent<Bouncer>().DoBounceAnimation();
+                GameManager.instance.AddTimer(0.5f, hit.transform.GetComponent<Bouncer>().ResetBouncer);
+                Debug.Log("BOUNCE");
 
                 transform.parent = null;
                 transform.rotation = Quaternion.Euler(0, 0, 0);
@@ -191,7 +194,10 @@ public class PlayerLogic : MonoBehaviour {
                 didJump = true;
                 anim.SetBool("jump", true);
                 moveDirection.y = jumpForce * -1.25f;
-                hit.transform.GetComponent<Animator>().SetTrigger("bounce");
+                //hit.transform.GetComponent<Animator>().SetTrigger("bounce");
+                hit.transform.GetComponent<Bouncer>().DoBounceAnimation();
+                GameManager.instance.AddTimer(0.5f, hit.transform.GetComponent<Bouncer>().ResetBouncer);
+                Debug.Log("BOUNCE");
 
                 transform.parent = null;
                 transform.rotation = Quaternion.Euler(0, 0, 0);
@@ -207,7 +213,10 @@ public class PlayerLogic : MonoBehaviour {
                 anim.SetBool("jump", true);
                 moveDirection.x = jumpForce * 1.25f;
                 GameManager.instance.AddTimer(0.25f, StopBouncing);
-                hit.transform.GetComponent<Animator>().SetTrigger("bounce");
+                //hit.transform.GetComponent<Animator>().SetTrigger("bounce");
+                hit.transform.GetComponent<Bouncer>().DoBounceAnimation();
+                GameManager.instance.AddTimer(0.5f, hit.transform.GetComponent<Bouncer>().ResetBouncer);
+                Debug.Log("BOUNCE");
 
                 transform.parent = null;
                 transform.rotation = Quaternion.Euler(0, 0, 0);
@@ -223,7 +232,10 @@ public class PlayerLogic : MonoBehaviour {
                 anim.SetBool("jump", true);
                 moveDirection.x = jumpForce * -1.25f;
                 GameManager.instance.AddTimer(0.25f, StopBouncing);
-                hit.transform.GetComponent<Animator>().SetTrigger("bounce");
+                //hit.transform.GetComponent<Animator>().SetTrigger("bounce");
+                hit.transform.GetComponent<Bouncer>().DoBounceAnimation();
+                GameManager.instance.AddTimer(0.5f, hit.transform.GetComponent<Bouncer>().ResetBouncer);
+                Debug.Log("BOUNCE");
 
                 transform.parent = null;
                 transform.rotation = Quaternion.Euler(0, 0, 0);

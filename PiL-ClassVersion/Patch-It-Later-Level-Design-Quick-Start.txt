@@ -1,0 +1,27 @@
+In Patch It Later, players are given an assortment of objects that they must place in the level to get to that level's key, and then get back to the start. The player *must* place all of their objects before they are able to get the key.
+
+When building a new level for Patch It Later, it's recommended that you start with the "1-1" level, and save a copy of it with a different name ("1-2", for instance). 1-1 contains everything you need to start building a level, including:
+
+Player prefab
+Key object
+Keyhole object (the level's goal, typically at the same position the player starts at)
+Ground tiles
+HUD
+In-level text (display a short message to the player about how an object works)
+ObjectManager (holds the objects that the player uses in the level)
+
+Besides a few important things (rearranging tiles, moving the key, moving the player + keyhole), most of the changes you'll need to make to the level involve the ObjectManager and the HUD.
+
+The ObjectManager:
+
+The ObjectManager contains 3 different Lists, which together control what items the player is allowed to place in the level. The first list is "Objects", the second is "Points", and the third is "Sprites". 
+
+"Objects" contains each individual type of item you want the player to be able to use. One level's list of objects might be ["Tile", "Laser"], one might be ["Tile", "Mover", "Rotator"], and another's might be just ["Tile"]. You can set the number of different objects you want to use, and then fill in each slot by dragging a Prefab of that item to the slot (all the objects are in the Prefabs folder). As of right now, up to 5 different objects are allowed per level.
+
+"Points" is how many of each object the player can use. This should be the same size as "Objects". If you want the player to have access to 4 Tiles and 1 Laser, Objects would look like ["Tile", "Laser"] and points should look like [4, 1].
+
+"Sprites" is made up of the images that will be displayed in the users HUD. This should be the same size as the other 2 lists. Simply drag in the appropriate sprites from the Sprites folder, in the same order as they appear in "Objects". If your objects are ["Tile", "Laser"], then Sprites should include the image of the Tile, then the image of the Laser.
+
+The HUD:
+
+The HUD only requires a few quick changes to function properly. Expand the HUD, and you'll see 2 important child objects:  Icons and PointText. These objects each contain 5 children objects that display to the player what items they have and how many. You'll want to enable or disable these child objects based on the player's items. If your ObjectManager's Objects list contains ["Tile", "Laser"], then you want to only have the first 2 children of Icons and PointText set active. If Objects is only ["Tile"], then only the first child of each should be active.

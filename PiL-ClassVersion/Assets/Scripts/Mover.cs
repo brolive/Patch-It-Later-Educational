@@ -23,10 +23,23 @@ public class Mover : MonoBehaviour {
             Debug.Log("HIT");
             if(hit.transform.name.Contains("GroundTile") ||
                 hit.transform.name.Contains("Dropper") ||
+                hit.transform.name.Contains("Bouncer") ||
                 hit.transform.name.Contains("Fan"))
             {
                 Debug.Log("REVERSE");
                 direction = -direction;
+
+                if(target.GetComponent<Bouncer>()!= null)
+                {
+                    target.GetComponent<Bouncer>().DoBounceAnimation();
+                    GameManager.instance.AddTimer(0.5f, target.GetComponent<Bouncer>().ResetBouncer);
+
+                    if (hit.transform.GetComponent<Bouncer>() != null)
+                    {
+                        hit.transform.GetComponent<Bouncer>().DoBounceAnimation();
+                        GameManager.instance.AddTimer(0.5f, hit.transform.GetComponent<Bouncer>().ResetBouncer);
+                    }
+                }
             }
             
         }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Bouncer : MonoBehaviour {
 
+    bool bounced = false;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -13,4 +15,20 @@ public class Bouncer : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public void DoBounceAnimation()
+    {
+        if(bounced)
+        {
+            return;
+        }
+
+        GetComponent<Animator>().SetTrigger("bounce");
+        bounced = true;
+    }
+
+    public void ResetBouncer()
+    {
+        bounced = false;
+    }
 }
