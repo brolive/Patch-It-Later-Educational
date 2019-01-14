@@ -1,6 +1,6 @@
 In Patch It Later, players are given an assortment of objects that they must place in the level to get to that level's key, and then get back to the start. The player *must* place all of their objects before they are able to get the key.
 
-When building a new level for Patch It Later, it's recommended that you start with the "1-1" level, and save a copy of it with a different name ("1-2", for instance). 1-1 contains everything you need to start building a level, including:
+When building a new level for Patch It Later, it's recommended that you start with the "0-0" level, and save a copy of it with a different name ("1-1" or "1-2", for instance). 0-0 contains everything you need to start building a level, including:
 
 Player prefab
 Key object
