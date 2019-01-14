@@ -22,6 +22,7 @@ public class Mover : MonoBehaviour {
         {
             Debug.Log("HIT");
             if(hit.transform.name.Contains("GroundTile") ||
+                hit.transform.name.Contains("Dropper") ||
                 hit.transform.name.Contains("Fan"))
             {
                 Debug.Log("REVERSE");

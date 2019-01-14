@@ -738,7 +738,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &138798573
 RectTransform:
   m_ObjectHideFlags: 0
@@ -852,17 +852,17 @@ Prefab:
     - target: {fileID: 114066670377447348, guid: f7b2d3dc94e525f4f84724c3bbcd2112,
         type: 2}
       propertyPath: points.Array.size
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114066670377447348, guid: f7b2d3dc94e525f4f84724c3bbcd2112,
         type: 2}
       propertyPath: objects.Array.size
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114066670377447348, guid: f7b2d3dc94e525f4f84724c3bbcd2112,
         type: 2}
       propertyPath: sprites.Array.size
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4935844331448960, guid: f7b2d3dc94e525f4f84724c3bbcd2112, type: 2}
       propertyPath: m_LocalPosition.x
@@ -904,25 +904,25 @@ Prefab:
         type: 2}
       propertyPath: objects.Array.data[1]
       value: 
-      objectReference: {fileID: 1732664007183512, guid: 6fee4ae458f183b43ba2d3ef14f1b332,
+      objectReference: {fileID: 1098575910704650, guid: 48a052da3f290374b881cba81350533f,
         type: 2}
     - target: {fileID: 114066670377447348, guid: f7b2d3dc94e525f4f84724c3bbcd2112,
         type: 2}
       propertyPath: objects.Array.data[2]
       value: 
-      objectReference: {fileID: 1152527792685754, guid: 419be8379c8e08b4dbac46ba9eac7dd7,
+      objectReference: {fileID: 1663808950943616, guid: b74ce4d285024ae4f84541c9599e05e8,
         type: 2}
     - target: {fileID: 114066670377447348, guid: f7b2d3dc94e525f4f84724c3bbcd2112,
         type: 2}
       propertyPath: objects.Array.data[3]
       value: 
-      objectReference: {fileID: 1709024660690650, guid: 7a9d36a4b69d8254581275769d6882e1,
+      objectReference: {fileID: 1770014453259794, guid: 6fee4ae458f183b43ba2d3ef14f1b332,
         type: 2}
     - target: {fileID: 114066670377447348, guid: f7b2d3dc94e525f4f84724c3bbcd2112,
         type: 2}
       propertyPath: objects.Array.data[4]
       value: 
-      objectReference: {fileID: 1986928662529680, guid: 0c9d9880e54593841b575d8ecfd6a777,
+      objectReference: {fileID: 1192540566551616, guid: 3b51af619026d7041b0d831e5fda92e7,
         type: 2}
     - target: {fileID: 114066670377447348, guid: f7b2d3dc94e525f4f84724c3bbcd2112,
         type: 2}
@@ -939,22 +939,22 @@ Prefab:
     - target: {fileID: 114066670377447348, guid: f7b2d3dc94e525f4f84724c3bbcd2112,
         type: 2}
       propertyPath: points.Array.data[1]
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114066670377447348, guid: f7b2d3dc94e525f4f84724c3bbcd2112,
         type: 2}
       propertyPath: points.Array.data[2]
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114066670377447348, guid: f7b2d3dc94e525f4f84724c3bbcd2112,
         type: 2}
       propertyPath: points.Array.data[3]
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114066670377447348, guid: f7b2d3dc94e525f4f84724c3bbcd2112,
         type: 2}
       propertyPath: points.Array.data[4]
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114066670377447348, guid: f7b2d3dc94e525f4f84724c3bbcd2112,
         type: 2}
@@ -970,25 +970,25 @@ Prefab:
         type: 2}
       propertyPath: sprites.Array.data[1]
       value: 
-      objectReference: {fileID: 21300008, guid: fc9fc774ac629f849b98043476305bbc,
+      objectReference: {fileID: 21300002, guid: 171d70f354b823643990d9c246fe26fe,
         type: 3}
     - target: {fileID: 114066670377447348, guid: f7b2d3dc94e525f4f84724c3bbcd2112,
         type: 2}
       propertyPath: sprites.Array.data[2]
       value: 
-      objectReference: {fileID: 21300010, guid: fc9fc774ac629f849b98043476305bbc,
+      objectReference: {fileID: 21300030, guid: fc9fc774ac629f849b98043476305bbc,
         type: 3}
     - target: {fileID: 114066670377447348, guid: f7b2d3dc94e525f4f84724c3bbcd2112,
         type: 2}
       propertyPath: sprites.Array.data[3]
       value: 
-      objectReference: {fileID: 21300006, guid: fc9fc774ac629f849b98043476305bbc,
+      objectReference: {fileID: 21300030, guid: fc9fc774ac629f849b98043476305bbc,
         type: 3}
     - target: {fileID: 114066670377447348, guid: f7b2d3dc94e525f4f84724c3bbcd2112,
         type: 2}
       propertyPath: sprites.Array.data[4]
       value: 
-      objectReference: {fileID: 21300028, guid: fc9fc774ac629f849b98043476305bbc,
+      objectReference: {fileID: 21300030, guid: fc9fc774ac629f849b98043476305bbc,
         type: 3}
     - target: {fileID: 114066670377447348, guid: f7b2d3dc94e525f4f84724c3bbcd2112,
         type: 2}
@@ -2068,7 +2068,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &672266441
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2323,7 +2323,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &785046709
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3976,7 +3976,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1342061456
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5574,7 +5574,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1756613914
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6115,7 +6115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AspectMode: 0
-  m_AspectRatio: 1.7765151
+  m_AspectRatio: 1.7792706
 --- !u!4 &1860777460 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4116936604441568, guid: 69631685abbe96247b80fef8df08c4e0,
@@ -6288,7 +6288,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1903567502
 RectTransform:
   m_ObjectHideFlags: 0

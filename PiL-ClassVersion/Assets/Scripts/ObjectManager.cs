@@ -77,6 +77,23 @@ public class ObjectManager : MonoBehaviour {
                 }
 
                 break;
+            case "Dropper":
+
+
+                if (press)
+                {
+
+                    GameObject g = Instantiate(objects[objectIndex], Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.rotation);
+                    g.transform.position = new Vector3(g.transform.position.x,
+                                                       g.transform.position.y,
+                                                       0);
+
+                    points[objectIndex] -= 1;
+
+                    GameManager.instance.PlaySoundPlace();
+                }
+
+                break;
             case "Fan":
                 RaycastHit h;
                 bool addFan = false;
@@ -284,7 +301,9 @@ public class ObjectManager : MonoBehaviour {
                     Debug.Log("CHECKING");
                     if (c.transform.name.Contains("GroundTile") ||
                         c.transform.name.Contains("Fan") ||
-                        c.transform.name.Contains("LaserPointer"))
+                        c.transform.name.Contains("LaserPointer") ||
+                        c.transform.name.Contains("Bouncer") ||
+                        c.transform.name.Contains("Dropper"))
                     {
                         didFind = true;
                         if (press)
@@ -306,6 +325,52 @@ public class ObjectManager : MonoBehaviour {
                 }
 
                 if (!didFind)
+                {
+                    sr.color = new Color(1, 0.5f, 0.5f, 0.5f);
+                }
+
+
+                break;
+
+            case "Stopper":
+
+                Collider[] potentialTargetsS = (Physics.OverlapSphere(new Vector3(mousePos.x,
+                                                                                 mousePos.y,
+                                                                                 0), 0.1f));
+                bool didFindS = false;
+                foreach (Collider c in potentialTargetsS)
+                {
+                    Debug.Log("CHECKING");
+                    if (c.transform.name.Contains("GroundTile") ||
+                        c.transform.name.Contains("Fan") ||
+                        c.transform.name.Contains("LaserPointer") ||
+                        c.transform.name.Contains("Bouncer") ||
+                        c.transform.name.Contains("Dropper"))
+                    {
+                        if (c.GetComponentInChildren<Mover>() == null)
+                            break;
+
+                        didFindS = true;
+                        if (press)
+                        {
+                            GameObject s = Instantiate(objects[objectIndex], Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.rotation);
+                            s.transform.position = new Vector3(c.transform.position.x,
+                                                               c.transform.position.y,
+                                                               0);
+                            //s.GetComponent<Stopper>().target = c.transform;
+                            c.GetComponentInChildren<Mover>().speed = 0;
+                            s.transform.parent = c.transform;
+                            Debug.Log("Approved");
+
+                            points[objectIndex] -= 1;
+                            GameManager.instance.PlaySoundPlace();
+                        }
+
+                        break;
+                    }
+                }
+
+                if (!didFindS)
                 {
                     sr.color = new Color(1, 0.5f, 0.5f, 0.5f);
                 }

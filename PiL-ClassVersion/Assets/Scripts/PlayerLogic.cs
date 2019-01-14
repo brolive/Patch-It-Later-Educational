@@ -96,6 +96,15 @@ public class PlayerLogic : MonoBehaviour {
         {
             if (hit.transform.tag == "Ground")
             {
+                if(hit.transform.GetComponent<Dropper>())
+                {
+                    if (!hit.transform.GetComponent<Dropper>().drop)
+                    {
+                        hit.transform.GetComponent<Dropper>().anim.SetTrigger("drop");
+                        GameManager.instance.AddTimer(0.5f, hit.transform.GetComponent<Dropper>().StartDrop);
+                    }
+                }
+
                 transform.parent = hit.transform;
                 anim.SetBool("jump", false);
                 airTime = 0;
