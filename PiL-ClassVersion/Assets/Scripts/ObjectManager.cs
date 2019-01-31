@@ -347,7 +347,15 @@ public class ObjectManager : MonoBehaviour {
                         c.transform.name.Contains("Bouncer") ||
                         c.transform.name.Contains("Dropper"))
                     {
-                        if (c.GetComponentInChildren<Mover>() == null)
+                        bool hasComponent = false;
+
+                        if (c.GetComponentInChildren<Mover>() != null)
+                            hasComponent = true;
+
+                        if (c.GetComponentInChildren<Spinner>() != null)
+                            hasComponent = true;
+
+                        if (!hasComponent)
                             break;
 
                         didFindS = true;
@@ -358,7 +366,10 @@ public class ObjectManager : MonoBehaviour {
                                                                c.transform.position.y,
                                                                0);
                             //s.GetComponent<Stopper>().target = c.transform;
-                            c.GetComponentInChildren<Mover>().speed = 0;
+                            if (c.GetComponentInChildren<Mover>() != null)
+                                c.GetComponentInChildren<Mover>().speed = 0;
+                            if (c.GetComponentInChildren<Spinner>() != null)
+                                c.GetComponentInChildren<Spinner>().rotSpeed = 0;
                             s.transform.parent = c.transform;
                             Debug.Log("Approved");
 
