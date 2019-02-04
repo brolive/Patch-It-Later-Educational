@@ -263,7 +263,9 @@ public class ObjectManager : MonoBehaviour {
                     //Debug.Log("CHECKING");
                     if (c.transform.name.Contains("GroundTile") ||
                         c.transform.name.Contains("Fan") ||
-                        c.transform.name.Contains("LaserPointer"))
+                        c.transform.name.Contains("LaserPointer") ||
+                        c.transform.name.Contains("Bouncer") ||
+                        c.transform.name.Contains("Dropper"))
                     {
                         acceptable = true;
                         if (press)
